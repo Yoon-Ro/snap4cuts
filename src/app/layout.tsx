@@ -7,8 +7,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Photo Booth App',
-  description: 'Take 4 photos with a countdown timer and create a beautiful collage',
+  title: 'snap4cuts',
+  description: 'Create fun, nostalgic photo booth strips instantly! Capture 4 perfect moments and turn them into beautiful memories you can share and cherish. Your virtual photo booth experience awaits! 📸✨',
 };
 
 export default function RootLayout({
