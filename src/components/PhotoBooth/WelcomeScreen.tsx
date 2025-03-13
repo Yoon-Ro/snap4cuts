@@ -13,9 +13,9 @@ const WelcomeScreen = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-16 bg-gradient-to-b from-blue-50 to-white p-4 lg:p-16">
+    <div className="min-h-screen h-screen flex flex-col-reverse lg:flex-row items-center justify-between lg:justify-center gap-4 lg:gap-16 bg-gradient-to-b from-blue-50 to-white p-4 lg:p-16">
       {/* Text Section */}
-      <div className="w-full lg:w-[45%] flex flex-col items-center lg:items-start space-y-6 lg:space-y-8 text-center lg:text-left">
+      <div className="w-full lg:w-[45%] flex flex-col items-center lg:items-start space-y-4 lg:space-y-8 text-center lg:text-left pb-6 lg:pb-0">
         {/* Color bars */}
         <div className="flex space-x-2">
           <div className="w-6 h-6 bg-[#FFE17D] rounded-sm"></div>
@@ -56,8 +56,8 @@ const WelcomeScreen = () => {
       </div>
 
       {/* Image Section */}
-      <div className="w-full lg:w-[45%] flex justify-center relative mb-8 lg:mb-0">
-        <div className="relative w-[243px] lg:w-[324px]">
+      <div className="w-full lg:w-[45%] flex justify-center relative h-[45vh] lg:h-auto lg:mb-0 pt-8 lg:pt-0">
+        <div className="relative w-auto h-full lg:w-[324px] lg:h-auto">
           {/* Mobile Frame */}
           <Image
             src="/Mobile.png"
@@ -66,7 +66,7 @@ const WelcomeScreen = () => {
             height={648}
             priority
             loading="eager"
-            className="w-full h-auto relative z-10"
+            className="w-auto h-full object-contain relative z-10 lg:w-full lg:h-auto"
           />
           
           {/* Collage Image */}

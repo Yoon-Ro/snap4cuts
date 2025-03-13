@@ -25,10 +25,22 @@ module.exports = {
             transform: 'translateY(-20%)',
             opacity: '0'
           }
+        },
+        flash: {
+          '0%': { 
+            opacity: '0'
+          },
+          '10%': {
+            opacity: '1'
+          },
+          '100%': {
+            opacity: '0'
+          }
         }
       },
       animation: {
-        'slideUpDown': 'slideUpDown 4s ease-in-out infinite'
+        'slideUpDown': 'slideUpDown 4s ease-in-out infinite',
+        'flash': 'flash 500ms ease-out'
       }
     },
   },

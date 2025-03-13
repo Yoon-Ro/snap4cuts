@@ -10,6 +10,7 @@ const PhotoCapture = () => {
   const webcamRef = useRef<Webcam>(null);
   const { photos, setPhotos, currentPhoto, setCurrentPhoto, setAppState } = usePhotoBooth();
   const [isCountingDown, setIsCountingDown] = useState(false);
+  const [isFlashing, setIsFlashing] = useState(false);
 
   const messages = [
     "Looks great! Keep smiling! 😊",
@@ -27,6 +28,10 @@ const PhotoCapture = () => {
 
   const handleCountdownComplete = () => {
     if (webcamRef.current) {
+      // Trigger flash effect
+      setIsFlashing(true);
+      setTimeout(() => setIsFlashing(false), 500);
+
       const photo = webcamRef.current.getScreenshot();
       if (photo) {
         setPhotos([...photos, photo]);
@@ -52,6 +57,12 @@ const PhotoCapture = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 p-4">
+      {/* Flash effect for entire screen */}
+      <div 
+        className={`fixed inset-0 bg-white z-50 pointer-events-none ${
+          isFlashing ? 'animate-flash' : 'opacity-0'
+        }`}
+      />
       <div className="relative w-full max-w-2xl h-[60vh] flex items-center justify-center mb-8">
         <div className="relative aspect-square h-full">
           <Webcam
