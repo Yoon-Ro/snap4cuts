@@ -13,9 +13,9 @@ const WelcomeScreen = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 bg-gradient-to-b from-blue-50 to-white p-4 lg:p-16">
-      {/* Left Section */}
-      <div className="w-full lg:w-[45%] flex flex-col items-start space-y-6 lg:space-y-8 mb-8 lg:mb-0">
+    <div className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-16 bg-gradient-to-b from-blue-50 to-white p-4 lg:p-16">
+      {/* Text Section */}
+      <div className="w-full lg:w-[45%] flex flex-col items-center lg:items-start space-y-6 lg:space-y-8 text-center lg:text-left">
         {/* Color bars */}
         <div className="flex space-x-2">
           <div className="w-6 h-6 bg-[#FFE17D] rounded-sm"></div>
@@ -24,11 +24,15 @@ const WelcomeScreen = () => {
           <div className="w-6 h-6 bg-[#4F7FFF] rounded-sm"></div>
         </div>
         
-        {/* Important announcement badge */}
-        <div className="bg-gray-100 rounded-full px-4 py-2 flex items-center space-x-2">
-          <span className="text-gray-700">Important announcement</span>
-          <span>→</span>
-        </div>
+        {/* Credit badge */}
+        <a 
+          href="https://x.com/Yoon_ro_" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="bg-gray-100 rounded-full px-4 py-2 flex items-center space-x-2 hover:bg-gray-200 transition-colors"
+        >
+          <span className="text-gray-700">by @yoon_ro_</span>
+        </a>
 
         {/* Main heading */}
         <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
@@ -38,7 +42,7 @@ const WelcomeScreen = () => {
         </h1>
 
         {/* Subheading */}
-        <p className="text-xl lg:text-2xl text-gray-700">
+        <p className="text-lg lg:text-2xl text-gray-700">
           Turn any gathering into a picture-perfect memory.
         </p>
 
@@ -51,8 +55,8 @@ const WelcomeScreen = () => {
         </Button>
       </div>
 
-      {/* Right Section - Stacked Images */}
-      <div className="w-full lg:w-[45%] flex justify-center relative">
+      {/* Image Section */}
+      <div className="w-full lg:w-[45%] flex justify-center relative mb-8 lg:mb-0">
         <div className="relative w-[243px] lg:w-[324px]">
           {/* Mobile Frame */}
           <Image
