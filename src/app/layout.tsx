@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   openGraph: {
     title: 'snap4cuts - Your Virtual Photo Booth Experience',
     description: 'Create fun, nostalgic photo booth strips instantly! Capture 4 perfect moments and turn them into beautiful memories you can share and cherish.',
