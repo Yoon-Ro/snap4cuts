@@ -252,7 +252,7 @@ const WelcomeScreen = () => {
           <div className="mt-12 pt-8 border-t border-gray-800">
             <div className="flex justify-between items-center">
               <a 
-                href="https://forms.gle/your-feedback-form-url" 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfAoY4X9SsNZWAdbVekB2NvHDy7hkPG-rtorphVwqAexccp1A/viewform" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 rounded-full bg-[#4F7FFF] text-white hover:bg-blue-600 transition-colors"
